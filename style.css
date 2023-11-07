@@ -1,0 +1,144 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define layout styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+
+
+p {
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+/* Add animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    0% { transform: scale(0.5); }
+    100% { transform: scale(1); }
+}
+
+.main {
+    animation: fadeIn 2s;
+}
+
+img {
+    animation: scaleUp 2s;
+}
+
+
+/* Style for the gallery images and captions */
+.image-card {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjust the layout for larger screens (two images per row) */
+@media (min-width: 768px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Adjust the layout for smaller screens (one image per row) */
+@media (max-width: 768px) {
+    .image-card {
+        margin: 10px;
+    }
+}
+
+/* Style for the about gallery content rows */
+.about-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Ensure responsive behavior: stack image and content on smaller screens */
+@media (max-width: 768px) {
+    .about-gallery-row {
+        flex-direction: column;
+    }
+}
+
+/* Style for the about gallery content text */
+.about-gallery-content {
+    flex: 1; /* Take up available space */
+    margin-right: 20px; /* Add spacing between image and text on larger screens */
+}
+
+/* Style for the about gallery content images */
+.about-gallery-row img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Limit image height, adjust as needed */
+}
+
+
